@@ -8,6 +8,18 @@ $color5: burlywood;
 $color6: grey;
 $color7: red;
 
+@mixin sizes ($width, $height){
+    height: $height;
+    width: $width;
+}
+
+$estilo1:(
+    arriba: 20px,
+    grueso: 900,
+    abajo: 50px,
+    tam: 20px
+);
+
 
 
 * {
@@ -58,11 +70,12 @@ $color7: red;
     }
 }
 
+
 .footerprincipal {
-    padding-top: 20px;
-    font-weight: 900;
-    padding-bottom: 50px;
-    font-size: 20px;
+    padding-top: map-get($estilo1, arriba);
+    font-weight: map-get($estilo1, grueso);
+    padding-bottom: map-get($estilo1, abajo);
+    font-size: map-get($estilo1, tam);
 }
 
 footer {
@@ -76,97 +89,14 @@ footer {
     margin: 10px;
 }
 
-.img1 {
-    grid-area: img1;
-    background-image: url(img/proyecto1.webp);
+@for $i from 1 through 13{
+    .img#{$i}{
+    grid-area: img#{$i};
+    background-image: url(img/proyecto#{$i}.webp);
     background-size: cover;
     background-position: center;
+    }
 }
-
-.img2 {
-    grid-area: img2;
-    background-image: url(img/proyecto2.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img3 {
-    grid-area: img3;
-    background-image: url(img/proyecto3.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img4 {
-    grid-area: img4;
-    background-image: url(img/proyecto4.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img5 {
-    grid-area: img5;
-    background-image: url(img/proyecto5.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img6 {
-    grid-area: img6;
-    background-image: url(img/proyecto6.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img7 {
-    grid-area: img7;
-    background-image: url(img/proyecto7.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img8 {
-    grid-area: img8;
-    background-image: url(img/proyecto8.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img9 {
-    grid-area: img9;
-    background-image: url(img/proyecto9.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img10 {
-    grid-area: img10;
-    background-image: url(img/proyecto10.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img11 {
-    grid-area: img11;
-    background-image: url(img/proyecto11.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img12 {
-    grid-area: img12;
-    background-image: url(img/proyecto12.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img13 {
-    grid-area: img13;
-    background-image: url(img/proyecto13.webp);
-    background-size: cover;
-    background-position: center;
-}
-
 
 /* PAGOS */
 .fondoprincipalpagos {
@@ -210,6 +140,9 @@ footer {
 .fondogeneralcontacto {
     background-image: url(img/ContactoFondo.jfif);
 }
+
+
+
 
 /* ANIMACIONES */
 .efect {
@@ -265,15 +198,13 @@ li:nth-of-type(5):hover {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    width: 0;
-    height: 0;
+    @include sizes (0,0);
     background: linear-gradient(45deg, $color3 45%, #aaa 50%, #ccc 60%, $color3);
     transition-duration: 0.3s;
 }
 
 .esquina:hover::before {
-    width: 30px;
-    height: 35px;
+    @include sizes (30px,35px);
 }
 
 /* ESCALAR */
@@ -298,6 +229,10 @@ li:nth-of-type(5):hover {
 .container {
     padding: 50px 0px;
 }
+
+
+
+
 
 
 @media only screen and (min-width:320px) and (max-width:480px) {
@@ -333,8 +268,7 @@ li:nth-of-type(5):hover {
     }
 
     .carouselimg {
-        width: 100%;
-        height: 40%;
+        @include sizes (100%,40%);
     }
 
     .fondoSection {
@@ -362,8 +296,7 @@ li:nth-of-type(5):hover {
         }
 
         & iframe {
-        width: 100%;
-        height: 50%;
+        @include sizes (100%,50%);
         }
     }
 
@@ -485,14 +418,13 @@ li:nth-of-type(5):hover {
     }
 
     .carouselimg {
-        width: 100%;
-        height: 60%;
+        @include sizes (100%,60%);
     }
 
     .fondoSection {
-        background-image: url(./img/5.png );
-        background-repeat: no-repeat;
-        background-size: cover;
+            background-image: url(./img/5.png );
+            background-repeat: no-repeat;
+            background-size: cover;
     }
 
     .contenedorIframe {
@@ -517,8 +449,7 @@ li:nth-of-type(5):hover {
         }
 
         & iframe {
-            width: 400px;
-            height: 300px;
+            @include sizes (400px,300px);
         }
 
     }
@@ -533,8 +464,7 @@ li:nth-of-type(5):hover {
 
         & img {
             padding: 50px;
-            height: 100%;
-            width: 100%;
+            @include sizes (100%,100%);
         }
 
         & h2 {
@@ -631,8 +561,7 @@ li:nth-of-type(5):hover {
     }
 
     .carouselimg {
-        width: 100%;
-        height: 100%;
+        @include sizes (100%,100%);
     }
 
     .fondoSection {
@@ -665,8 +594,7 @@ li:nth-of-type(5):hover {
         }
 
         & iframe {
-            width: 400px;
-            height: 300px;
+            @include sizes (400px,300px);
         }
     }
 
@@ -682,8 +610,7 @@ li:nth-of-type(5):hover {
 
         & img {
             padding: 15px;
-            height: 412px;
-            width: 550px;
+            @include sizes (550px,412px);
         }
 
         & h2 {
