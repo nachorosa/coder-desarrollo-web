@@ -1,0 +1,14 @@
+ 
+# HTID:19179286: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.html - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+php_value display_errors 1
+</IfModule>
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:19179286:
