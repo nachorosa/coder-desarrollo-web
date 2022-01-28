@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles.css">
     <title>ALICIA BEATRIZ MARTIN - ARQUITECTA</title>
     <meta name="description" content="Este es el sitio web sobre arquitectura en el que encontrarás informacion, proyectos, imagenes, costos, pagos, formas de contactacnos y mucho mas!">
-    <meta name="keywords"  content="ARQUITECTURA, ARQUITECTA, OBRAS, DEMOLICION, CONSTRUCCION, PROYECTOS, DISEÑOS, CONSTRUCCIONES, REMODELACIONES">
+    <meta name="keywords"  content="ARQUITECTURA, ARQUITECTA, OBRAS, DEMOLICION, CONSTRUCCION, PROYECTOS, CONTACTO, TELEFONO, MAIL, FORMULARIO, HORARIO">
     <link rel="icon" href="../img/favicon.png">
 </head>
 
@@ -45,32 +45,72 @@
     </nav>
 
     <!-- fin menu -->
-    <section class="debajomenu bgproyectos">
+    <section class="debajomenu bgcontacto">
         <div class="container veloz">
-            <h1>PROYECTOS</h1>
-            <p>FOTOS DE NUESTROS ULTIMOS PROYECTOS</p>
+            <h1>CONTACTO</h1>
+            <p>PÓNGASE EN CONTACTO CON NOSOTROS</p>
         </div>
     </section>
 
-    <section class="proyectos">
-        <div class="veloz">
-            <h2>En esta seccion podra ver algunos de nuestos proyectos, su ubicacion y el año en el que se realizo!</h2>
+    <main class="contactos">
+        <div class="container-fluid text-center">
+            <section class="row">
+                <div class="col-xs-12 col-md-3 aparicion">
+
+                    <div class="veloz">
+                        <h2>MANTENTE EN CONTACTO</h2>
+                    </div>
+                    <h3 class=" fas fa-envelope-open"> CORREO ELECTRÓNICO:</h3>
+                    <p>ABMARTINJI@HOTMAIL.COM</p>
+                    <h3 class=" fas fa-mobile-alt"> CELULAR:</h3>
+                    <p>+54 15-5651-7886</p>
+                    <h3 class=" fas fa-map-marker-alt"> UBICACION:</h3>
+                    <p>SAN ANDRES, PARTIDO DE SAN MARTIN</p>
+                    <h3 class=" fas fa-clock"> HORARIO:</h3>
+                    <p>LUNES - VIERNES: 09:00 - 18:00 Hs</p>
+                </div>
+
+                <div class="col-xs-12 col-md-9 aparicion">
+                    <div class="container">
+                        <div class="veloz">
+                            <h2>FORMULARIO</h2>
+                        </div>
+                        <form action="https://formsubmit.co/nachhitorosa@hotmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="¡Nuevo envío!">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" name="name" class="form-control" placeholder="NOMBRE" required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="email" name="email" class="form-control" placeholder="CORREO" required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" name="celular" class="form-control" placeholder="CELULAR"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="MENSAJE..." class="form-control" name="message" rows="10"
+                                    required></textarea>
+                            </div>
+                            <div class="veloz">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
         </div>
-        <div class="miestilo2">            
-            <a href="../pages/proyectos/ejemplo1.html" class="caja caja1 esquinasRedondeadas aparicion">ejemplo 1</a>
-            <a href="../pages/proyectos/ejemplo2.html" class="caja caja2 esquinasRedondeadas aparicion">ejemplo 2</a>
-            <a href="../pages/proyectos/ejemplo1.html" class="caja caja3 esquinasRedondeadas aparicion">ejemplo 3</a>
-            <a href="../pages/proyectos/ejemplo2.html" class="caja caja4 esquinasRedondeadas aparicion">ejemplo 4</a>
-            <a href="../pages/proyectos/ejemplo1.html" class="caja caja5 esquinasRedondeadas aparicion">ejemplo 5</a>
-            <a href="../pages/proyectos/ejemplo2.html" class="caja caja6 esquinasRedondeadas aparicion">ejemplo 6</a>
-            <a href="../pages/proyectos/ejemplo1.html" class="caja caja7 esquinasRedondeadas aparicion">ejemplo 7</a>
-            <a href="../pages/proyectos/ejemplo2.html" class="caja caja8 esquinasRedondeadas aparicion">ejemplo 8</a>
-            <a href="../pages/proyectos/ejemplo1.html" class="caja caja9 esquinasRedondeadas aparicion">ejemplo 9</a>
-            <a href="../pages/proyectos/ejemplo2.html" class="caja caja10 esquinasRedondeadas aparicion">ejemplo 10</a>
-            <a href="../pages/proyectos/ejemplo1.html" class="caja caja11 esquinasRedondeadas aparicion">ejemplo 11</a>
-            <a href="../pages/proyectos/ejemplo2.html" class="caja caja12 esquinasRedondeadas aparicion">ejemplo 12</a>
-        </div>
-    </section>
+
+
+    </main>
+
 
     <footer>
 
@@ -83,6 +123,7 @@
         </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -93,4 +134,5 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
 </body>
+
 </html>
